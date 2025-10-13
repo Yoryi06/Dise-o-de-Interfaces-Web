@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de Registro</title>
+  <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <form>
+    <!-- Datos Personales -->
+    <fieldset class="personales">
+      <legend>Datos Personales</legend>
+
+      <label>Apellidos:
+        <input type="text" placeholder="Insertar apellidos">
+      </label>
+
+      <label>Nombre:
+        <input type="text" placeholder="Insertar nombre">
+      </label>
+
+      <label>Email:
+        <input type="email" placeholder="Correo electrónico">
+      </label>
+
+      <br><br>
+
+      <label>Teléfono:
+        <input type="tel" placeholder="Nº de contacto">
+      </label>
+
+      <label>DNI:
+        <input type="text" placeholder="Nº de documento">
+      </label>
+
+      <label>Fecha de Nacimiento:
+        <input type="date">
+      </label>
+
+      <br><br>
+
+      <label>Provincia:
+        <select>
+          <option>-- Selecciona --</option>
+          <option>Madrid</option>
+          <option>Barcelona</option>
+          <option>Valencia</option>
+        </select>
+      </label>
+
+      <label>Sexo:
+        <input type="radio" name="sexo"> Hombre
+        <input type="radio" name="sexo"> Mujer
+      </label>
+
+      <br><br>
+
+      <label>Dispositivo Preferido:
+        <input type="checkbox"> PC
+        <input type="checkbox"> Tableta
+        <input type="checkbox"> Móvil
+      </label>
+
+      <label>IDE Preferido:
+        <input type="text">
+      </label>
+    </fieldset>
+
+    <!-- Otros datos -->
+    <fieldset class="otros">
+      <legend>Otros datos de interés</legend>
+      <textarea rows="5" cols="80" placeholder="Indica cualquier otra información que consideres relevante"></textarea>
+    </fieldset>
+
+    <!-- Competencias -->
+    <fieldset class="competencias">
+      <legend>Competencias de Programación:</legend>
+
+      <label>Nivel de Java:
+        <input type="range" min="0" max="10">
+      </label>
+
+      <label>Nivel de Python:
+        <input type="range" min="0" max="10">
+      </label>
+
+      <br><br>
+
+      <label>Nivel de HTML:
+        <input type="range" min="0" max="10">
+      </label>
+
+      <label>Nivel de CSS:
+        <input type="range" min="0" max="10">
+      </label>
+    </fieldset>
+
+    <!-- Botones -->
+    <div class="botones">
+      <button type="button">Activado</button>
+      <button type="reset">Borrar Datos</button>
+      <button type="submit">Enviar Solicitud</button>
+      <button type="button" disabled>Desactivado</button>
+    </div>
+  </form>
+</body>
+</html>
