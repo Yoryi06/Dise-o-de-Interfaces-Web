@@ -1,0 +1,103 @@
+
+h1 {
+  text-align: center;
+}
+
+
+img {
+  width: 50px;
+  height: 50px;
+}
+
+
+.primera {
+  background-color: red;
+  color: white;
+}
+
+
+#fila .gb {
+  background-color: grey;
+  font-size: 2em;
+  text-align: center;
+}
+
+
+#listas li {
+  color: red;
+}
+
+#cinco {
+  background-color: yellow;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+table {
+  border-collapse: collapse;
+  margin: 0px auto;
+  width: 50%;
+}
+
+td,
+th {
+  border: 1px solid black;
+}
+
+
+[colspan="2"],
+[colspan="3"] {
+  background-color: blue;
+}
+
+
+table {
+  border-collapse: collapse;
+}
+
+td,
+th {
+  border: 1px solid black;
+}
+
+
+
+tbody tr:nth-child(3) th:nth-child(2) {
+  background-color: yellow;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: green;
+}
+
+a:visited {
+  color: red;
+}
+
+
+
+tr th:last-child:hover,
+tr td:last-child:hover {
+  font-size: 2em;
+}
+
+
+thead tr th::first-letter {
+  font-size: 2em;
+}
+
+input:required {
+  border: 1px solid red;
+  padding: 10px;
+}
+
+label::after {
+  color: red;
+  content: "*";
+}
