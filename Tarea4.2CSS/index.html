@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba de CSS</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+
+  <form>
+    <h2 class="center-inline">Formulario de ejemplo</h2>
+
+    <div class="columns">
+      <label>Nombre:
+        <input type="text" class="block">
+      </label>
+      <label>Email:
+        <input type="email" class="inline-block">
+      </label>
+      <label>Provincia:
+        <select class="fluid">
+          <option>Madrid</option>
+          <option>Barcelona</option>
+        </select>
+      </label>
+      <label>Comentario:
+        <textarea rows="3" class="hybrid"></textarea>
+      </label>
+    </div>
+
+    <div class="clearfix">
+      <div class="float-left">
+        <label>Edad:
+          <input type="number" class="elastic">
+        </label>
+      </div>
+      <div class="float-right">
+        <label>Teléfono:
+          <input type="tel" class="fixed">
+        </label>
+      </div>
+      <div class="clear">Datos flotantes organizados</div>
+    </div>
+
+    <div class="center-block">Bloque centrado horizontalmente</div>
+    <div class="center-vertical-block">Centrado vertical con flex</div>
+
+    <div class="absolute-container">
+      <div class="absolute">Posición absoluta</div>
+    </div>
+
+    <div class="sticky">Elemento sticky</div>
+    <div class="z-index">Elemento con z-index</div>
+
+    <button type="submit">Enviar</button>
+  
+</body>
+</html>
