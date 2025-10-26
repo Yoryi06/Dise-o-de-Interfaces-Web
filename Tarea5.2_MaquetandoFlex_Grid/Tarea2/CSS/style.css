@@ -1,0 +1,10 @@
+nav {
+    background: #007878;
+}
+
+.menu  {
+    display: flex;
+    justify-content: left;
+    padding: 10px 0;
+    margin-left: 20px;
+}

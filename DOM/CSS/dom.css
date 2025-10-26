@@ -1,0 +1,47 @@
+ /* Indicamos el calculo del tamaño de las cajas de cualquier elemento*/
+
+*{ 
+    box-sizing: border-box;
+    font-family: Vergur, 'PT Sans', Verdana;
+    font-weight: 600;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: black;
+}
+
+header, nav, main, section, .container {
+    margin: 20px;
+    width: 90%;
+}
+
+nav ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    background: skyblue;
+    list-style-type: none;
+    height: 5em;
+
+}
+
+nav li{
+    background-color: red;
+    border: none;
+    flex-basis: 30%;
+    flex-grow: 1;
+    flex-basis: 5;
+    flex-shrink: 1;
+}
+
+nav li:nth-child(3){
+    background-color: blue;
+    align-self: flex-start;
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(3, 20%);
+    grid-template-rows: ;
+    height: 10em;
+}

@@ -1,0 +1,93 @@
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .gallery-item {
+            flex-grow: 1;
+            min-width: 200px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+    
+        .gallery-item:nth-child(1) {
+            flex-basis: 23%;
+            max-height: 300px;
+        }
+
+        .gallery-item:nth-child(2) {
+            flex-basis: 23%;
+            max-height: 250px;
+        }
+
+        
+        .gallery-item:nth-child(3) {
+            flex-basis: 23%;
+            max-height: 560px;
+        }
+
+        
+        .gallery-item:nth-child(4) {
+            flex-basis: 23%;
+            max-height: 180px;
+        }
+
+        .gallery-item:nth-child(5) {
+            flex-basis: 23%;
+            max-height: 180px;
+        }
+
+        .gallery-item:nth-child(6) {
+            flex-basis: 23%;
+            max-height: 180px;
+        }
+
+        
+        .gallery-item:nth-child(7) {
+            flex-basis: 23%;
+            max-height: 560px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 48px;
+            font-weight: bold;
+            color: #ff9933;
+            letter-spacing: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .gallery-item {
+                flex-basis: 100% !important;
+                max-height: 300px !important;
+            }
+        }
