@@ -1,0 +1,195 @@
+// Paletas de colores básica
+
+//Colores generales
+$color-background: #FFFFFF;
+$color-base: #333333;
+
+
+//Colores de base
+$color-error: #FF0000;
+$color-warning: rgb(239, 241, 120);
+$color-accepted: rgb(55, 138, 0);
+$color-normal: rgb(0, 110, 255);
+$color-shadow: #888;
+
+/*Estilos para el contenedor general de mi página*/
+$main-container-width: 80%;
+$main-container-margin: 0px auto;
+
+//Estilos para los bordes
+$border-color: $color-base;
+$border-width: 0.1rem;
+$border-style: "solid";
+$border-radius-small: 0.2rem;
+$border-radius: 1rem;
+$boder-radius-big: 2rem;
+
+
+//Colores barra de menú
+$navbar-background-color-light: rgb(155, 111, 145);
+$navbar-background-color-dark: rgb(46, 40, 140);
+$body-background-color-light: rgb(146, 130, 142);
+$body-background-color-dark: rgb(94, 91, 147);
+$navbar-color-hover: $color-background;
+
+//navbar padding
+$navbar-padding: 0.2rem;
+$navbar-li-paddingleft: 1rem;
+$navbar-li-paddingright: 1rem;
+$navbar-li-display: inline-block;
+$navbar-li-active-fontweight: bolder;
+$navbar-li-textdecoration: none;
+
+/*Estructura de anidamiento para la figura (cards)*/
+$figure-width: 25%;
+
+//modo de vista
+$light-theme: true;
+$dark-theme: true;
+
+//------------------------------------------------------------------------------------------------------------------\\
+
+body{
+    @if $light-theme == true{
+        background-color: $body-background-color-light;
+        color: #000;
+    }@else if $dark-theme == true{
+        background-color: $body-background-color-dark;
+        color: #fff;
+    }@else{
+        background-color: #aaa;
+        color: #444;
+    }
+}
+
+.container {
+    width: $main-container-width;
+    margin: $main-container-margin;
+}
+
+nav {
+    @if $light-theme == true{
+        background-color: $navbar-background-color-light;
+        color: #000;
+    }@else if $dark-theme == true{
+        background-color: $navbar-background-color-dark;
+        color: #fff;
+    }@else{
+        background-color: #aaa;
+        color: #444;
+    }
+    padding: 0.2rem;
+
+    ul {
+        li {
+            display: inline-block;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            &.active {
+                color: $navbar-color-hover;
+                font-weight: $navbar-li-active-fontweight;
+            }
+            &:hover {color: $navbar-color-hover;}
+            a {text-decoration: none;}
+        }
+    }
+}
+
+figure.card {
+    border: $border-width #{$border-style} $border-color;
+    border-radius: $border-radius;
+    display: inline-block;
+    padding: 1rem;
+    width: anchura-col(4,10);
+    img {
+        border-radius: $boder-radius-big; 
+        width: 100%;
+    }
+    figcaption {
+        font-size: 0.8rem;
+        margin: 0.5rem;
+        text-align: center;
+    }
+
+}
+
+$num:1;
+$color-list: #aaa, #00f, orange, #CCC, #0f0;
+
+@while $num < 6{
+    figure:nth-child(#{$num}){
+        color: #f00;
+        background-color: nth($color-list, $num);
+    }
+    $num: $num +1;
+}
+
+@for $i from 1 to 6 {
+    li:nth-of-type(#{$i}){
+        color: #f00;
+        background-color: nth($color-list, $i);
+    }
+}
+
+// @each $u in $banderas {
+//     .profile-#{$u}{
+//         background: image-url("img/#{$u}.png") no repeat;
+//     }
+// }
+
+$mapa: (
+    espana: "espana.png",
+    francia: "francia.png",
+    alemania: "alemania.png",
+    italia: "italia.png"
+);
+
+@each $u,$v in $mapa {
+    div.#{$u}{
+        background-image: url("../img/#{$v}");
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding: 0.2rem;
+        margin: 1rem 3rem 1rem 3rem;
+        width: 14rem;
+        border: 2px solid black;
+        border-radius: 5rem;
+    }
+}
+
+//Definicion de funciones por el usuario
+@function anchura-col($cols, $total) {
+  @return percentage($cols/$total);
+}
+
+
+$btn-colors: ("error" : $color-error,
+    "warning" : $color-warning,
+    "accepted" : $color-accepted,
+    "normal" : $color-normal);
+
+//Elemento botón general
+.btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 0.4rem;
+    padding: 0.5rem;
+    //Estilo para el efecto de cuando pase el ratón por encima
+    &:hover {box-shadow: 0.2rem 0.2rem $color-shadow;}
+    //Estilo al hacer click en el boton
+    &:active {
+        background-color: orange;
+        color: white;
+    }
+}
+
+//Clase adicional que le da color
+@each $k,
+$v in $btn-colors {
+
+    .btn-#{$k} {
+        background-color: $v;
+    }
+}
+
