@@ -1,0 +1,46 @@
+// ==========================================
+// VARIABLES
+// ==========================================
+$color-primary: #003366;
+$color-secondary: #D4A574;
+$color-text: #333333;
+$color-white: #FFFFFF;
+$color-gray-light: #F5F5F5;
+$color-gray-dark: #666666;
+
+$font-main: 'Arial', sans-serif;
+$font-heading: 'Georgia', serif;
+
+$max-width: 1200px;
+$gap: 20px;
+
+// ==========================================
+// MIXINS
+// ==========================================
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin grid-container($columns: 12) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  gap: $gap;
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@mixin button-base {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
